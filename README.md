@@ -2,6 +2,8 @@
 
 A comprehensive system for analyzing and visualizing the effects of creatine supplementation on strength, muscle mass, and performance metrics.
 
+This project demonstrates advanced data science capabilities including SQLite database management, statistical analysis with effect sizes and hypothesis testing, and interactive visualization with Plotly Dash. Perfect for showcasing skills in data engineering, statistical analysis, and scientific visualization.
+
 ## Features
 
 - **Data Management**: SQLite database for storing participant data and measurements.
