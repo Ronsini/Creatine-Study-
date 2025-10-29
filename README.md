@@ -11,12 +11,20 @@ A comprehensive system for analyzing and visualizing the effects of creatine sup
 - **Comprehensive Testing**: Full test coverage with pytest.
 - **Interactive Dashboard**: Web-based dashboard for real-time data exploration.
 
+### Dashboard Features
+
+- **KPI Strip**: Group difference, effect size (Cohen's d), p-value, and sample size
+- **Interactive Charts**: Time series progression with confidence bands
+- **Age & Training Comparisons**: Boxplots for different population groups
+- **Statistical Analysis**: Automated t-tests and effect size calculations
+- **Professional Visualization**: Publication-ready charts with uncertainty bands
+
 ## Installation
 
 1. Clone the repository:
 ```bash
 git clone https://github.com/Ronsini/Creatine-Study.git
-cd creatine-study
+cd Creatine-Study
 ```
 
 2. Create and activate a virtual environment:
@@ -25,59 +33,56 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. Install the package and dependencies:
+3. Install dependencies:
 ```bash
-pip install -e .[dev]
+pip install -r requirements.txt
 ```
 
 ## Quick Start
 
-1. Initialize the database:
+1. Initialize the database with sample data:
 ```bash
-python -m src.main --init-db
+python main.py --init-db
 ```
 
-2. Run the analysis:
+2. Launch the interactive dashboard:
 ```bash
-python -m src.main --analyze
+python main.py --dashboard
 ```
 
-3. Generate visualizations:
-```bash
-python -m src.main --visualize
-```
+3. Open your browser to http://localhost:8050
 
-4. Launch the dashboard:
+You can also run standalone analysis:
 ```bash
-python -m src.main --dashboard
+python main.py --analyze
+python main.py --visualize
 ```
 
 ## Project Structure
 
 ```
 creatine-study/
-├── database/               # Database files
-│   ├── schema.sql         # Database schema
-│   └── queries.sql        # Analysis queries
-├── src/                   # Source code
-│   ├── database.py        # Database operations
-│   ├── analysis.py        # Data analysis
-│   ├── visualization.py   # Data visualization
-│   └── dashboard.py       # Web dashboard
-├── tests/                 # Test files
-│   ├── test_database.py
-│   ├── test_analysis.py
-│   └── test_visualization.py
-├── notebooks/             # Jupyter notebooks
-└── docs/                  # Documentation
+├── database/              # Database files
+│   └── creatine_study.db  # SQLite database
+├── main.py                # Main entry point
+├── database.py            # Database operations
+├── analysis.py            # Statistical analysis
+├── visualization.py       # Static visualizations
+├── dashboard.py           # Interactive Dash dashboard
+├── schema.sql            # Database schema
+├── queries.sql           # Analysis queries
+├── test_database.py      # Database tests
+├── test_analysis.py      # Analysis tests
+├── test_visualization.py # Visualization tests
+└── requirements.txt       # Python dependencies
 ```
 
 ## Usage Examples
 
 ### Basic Analysis
 ```python
-from src.database import CreatineDatabase
-from src.analysis import CreatineAnalysis
+from database import CreatineDatabase
+from analysis import CreatineAnalysis
 
 # Initialize database
 db = CreatineDatabase()
@@ -91,7 +96,7 @@ report = analysis.generate_summary_report()
 
 ### Visualization
 ```python
-from src.visualization import CreatineVisualization
+from visualization import CreatineVisualization
 
 # Create visualization instance
 viz = CreatineVisualization(db)
@@ -102,7 +107,7 @@ viz.generate_summary_plots('output/plots')
 
 ### Interactive Dashboard
 ```python
-from src.dashboard import CreatineDashboard
+from dashboard import CreatineDashboard
 
 # Create and run dashboard
 dashboard = CreatineDashboard(db)
@@ -113,12 +118,12 @@ dashboard.run_server(debug=True)
 
 Run the test suite:
 ```bash
-pytest tests/
+pytest test_*.py
 ```
 
 Generate coverage report:
 ```bash
-pytest --cov=src tests/
+pytest --cov=. test_*.py
 ```
 
 ## Contributing

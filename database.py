@@ -31,7 +31,7 @@ class CreatineDatabase:
     def init_database(self):
         """Initialize database with schema."""
         try:
-            schema_path = Path("database/schema.sql")
+            schema_path = Path("schema.sql")
             with open(schema_path, 'r') as f:
                 schema_sql = f.read()
                 
@@ -173,7 +173,7 @@ class CreatineDatabase:
     def run_analysis_query(self, query_name: str) -> pd.DataFrame:
         """Run a predefined analysis query."""
         try:
-            queries_path = Path("database/queries.sql")
+            queries_path = Path("queries.sql")
             with open(queries_path, 'r') as f:
                 queries = f.read()
                 

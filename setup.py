@@ -15,14 +15,14 @@ def read_requirements(filename):
 
 setup(
     name="creatine-study",
-    version="0.1.0",
+    version="1.0.0",
     author="Ronald Orsini",
     author_email="ronniej7orsini@gmail.com",
     description="A comprehensive creatine supplementation study analysis system",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Ronsini/Creatine-Study",
-    packages=find_packages(exclude=["tests*", "docs*"]),  # Excluding unnecessary files
+    py_modules=['main', 'database', 'analysis', 'visualization', 'dashboard'],
     install_requires=read_requirements("requirements.txt"),
     extras_require={
         'dev': [
@@ -34,13 +34,9 @@ setup(
             'mypy>=1.3.0',
             'isort>=5.12.0'
         ],
-        'docs': [
-            'sphinx>=7.0.1',
-            'sphinx-rtd-theme>=1.2.0'
-        ]
     },
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 4 - Beta",
         "Intended Audience :: Science/Research",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
@@ -48,22 +44,10 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
         "Topic :: Scientific/Engineering :: Bio-Informatics",
         "Topic :: Scientific/Engineering :: Medical Science Apps."
     ],
     python_requires=">=3.8",
-    entry_points={
-        'console_scripts': [
-            'creatine-study=creatine_study.main:main',  # Updated to follow correct package path
-        ],
-    },
     include_package_data=True,
-    package_data={
-        'creatine_study': ['database/*.sql', 'data/*.csv', 'config/*.json'],  # More flexible data inclusion
-    },
-    project_urls={
-        "Bug Tracker": "https://github.com/Ronsini/creatine-study/issues",
-        "Documentation": "https://creatine-study.readthedocs.io/",
-        "Source Code": "https://github.com/Ronsini/creatine-study",
-    },
 )

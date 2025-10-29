@@ -5,7 +5,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 import logging
 from datetime import datetime, timedelta
-from .database import CreatineDatabase
+from database import CreatineDatabase
 
 # Configure logging
 logging.basicConfig(

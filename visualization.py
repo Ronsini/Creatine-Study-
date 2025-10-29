@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 import logging
-from .database import CreatineDatabase
+from database import CreatineDatabase
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

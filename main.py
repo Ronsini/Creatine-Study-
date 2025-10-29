@@ -8,10 +8,10 @@ import numpy as np
 from datetime import date
 
 import pandas as pd
-from src.database import CreatineDatabase
-from src.analysis import CreatineAnalysis
-from src.visualization import CreatineVisualization
-from src.dashboard import CreatineDashboard
+from database import CreatineDatabase
+from analysis import CreatineAnalysis
+from visualization import CreatineVisualization
+from dashboard import CreatineDashboard
 
 # Configure logging
 logging.basicConfig(
