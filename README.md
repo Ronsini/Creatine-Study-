@@ -26,7 +26,7 @@ This project demonstrates advanced data science capabilities including SQLite da
 1. Clone the repository:
 ```bash
 git clone https://github.com/Ronsini/Creatine-Study-.git
-cd Creatine-Study
+cd Creatine-Study-
 ```
 
 2. Create and activate a virtual environment:
