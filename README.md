@@ -145,14 +145,14 @@ pip install -e .[dev,docs]
 
 Format code:
 ```bash
-black src/ tests/
-isort src/ tests/
+black .
+isort .
 ```
 
 Run linters:
 ```bash
-flake8 src/ tests/
-mypy src/ tests/
+flake8 .
+mypy .
 ```
 
 ## Documentation
