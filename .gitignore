@@ -1,50 +1,28 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
+# Envs
+.venv/
 venv/
-env/
-ENV/
-.venv
 
-# Database
-*.db
-*.sqlite
-*.sqlite3
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Project specific
-plots/
-results/
-*.log
-creatine_study.log
-
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-
-# Documentation
-docs/_build/
-
-# Jupyter
-.ipynb_checkpoints/
-*.ipynb
-
-# Distribution / packaging
-dist/
-build/
+# Python junk
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 *.egg-info/
 
+# OS junk
+.DS_Store
+
+# Local data & secrets
+*.db
+*.sqlite
+.env
+
+# Logs
+*.log
+
+# Tools
+.mypy_cache/
+.pytest_cache/
+.coverage
+dist/
+build/
