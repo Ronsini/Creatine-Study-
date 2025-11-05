@@ -25,7 +25,7 @@ This project demonstrates advanced data science capabilities including SQLite da
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Ronsini/Creatine-Study.git
+git clone https://github.com/Ronsini/Creatine-Study-.git
 cd Creatine-Study
 ```
 
@@ -175,5 +175,5 @@ View the documentation at `docs/_build/html/index.html`.
 
 Ronald Orsini - ronniej7orsini@gmail.com
 
-Project Link: [https://github.com/Ronsini/creatine-study](https://github.com/Ronsini/creatine-study)
+Project Link: [https://github.com/Ronsini/creatine-study-](https://github.com/Ronsini/creatine-study-)
 
